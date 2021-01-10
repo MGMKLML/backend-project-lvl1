@@ -1,0 +1,20 @@
+name: Linter Runner
+
+# Run on push and pull request
+on: 
+  - push
+  - pull_request
+
+jobs:
+  eslint:
+    name: Linter Runner
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Run Linter
+      - name: Run linter
+        run: make lint
