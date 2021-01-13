@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import welcomeUser from '../src/cli.js';
+import startBrainEvenGame from '../src/brain-games-logic.js';
 
-welcomeUser();
+startBrainEvenGame();
