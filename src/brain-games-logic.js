@@ -6,9 +6,10 @@ const PHRASE_HELLO = 'Hello';
 const PHRASE_TRYAGAIN = 'Let\'s try again';
 const PHRASE_CONGRATS = 'Congratulations';
 const PHRASE_QUESTION = 'Question';
+const PHRASE_IS_WRONG_ANSWER = "is wrong answer ;(.";
+const PHRASE_CORRECT_ANSWER_WAS = "Correct answer was";
 const QUESTION_NAME = 'May I have your name? ';
 const QUESTION_ANSWER = 'Your answer: ';
-const ANSWER_WRONG = '\'yes\' is wrong answer ;(. Correct answer was \'no\'.';
 const ANSWER_CORRECT = 'Correct!';
 
 const MIN = 1;
@@ -21,6 +22,8 @@ const askQuestion = (question) => readlineSync.question(question);
 const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 const isEven = (number) => (number % 2 === 0);
+
+const getInvertedAnswer = (answer) => answer === 'yes' ? 'no' : 'yes';
 
 const isAnswerCorrect = (answer, number) => {
   const answerBool = answer === 'yes';
@@ -48,7 +51,8 @@ const startBrainEvenGame = () => {
       sayPhrase(ANSWER_CORRECT);
       round += 1;
     } else {
-      sayPhrase(ANSWER_WRONG);
+      const invertedAnswer = getInvertedAnswer(answer);
+      sayPhrase(`'${answer}' ${PHRASE_IS_WRONG_ANSWER} ${PHRASE_CORRECT_ANSWER_WAS} '${invertedAnswer}'.`);
       sayPhrase(`${PHRASE_TRYAGAIN}, ${name}!`);
       shouldContinue = false;
     }
