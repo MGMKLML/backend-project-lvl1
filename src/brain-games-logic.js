@@ -6,8 +6,8 @@ const PHRASE_HELLO = 'Hello';
 const PHRASE_TRYAGAIN = 'Let\'s try again';
 const PHRASE_CONGRATS = 'Congratulations';
 const PHRASE_QUESTION = 'Question';
-const PHRASE_IS_WRONG_ANSWER = "is wrong answer ;(.";
-const PHRASE_CORRECT_ANSWER_WAS = "Correct answer was";
+const PHRASE_IS_WRONG_ANSWER = 'is wrong answer ;(.';
+const PHRASE_CORRECT_ANSWER_WAS = 'Correct answer was';
 const QUESTION_NAME = 'May I have your name? ';
 const QUESTION_ANSWER = 'Your answer: ';
 const ANSWER_CORRECT = 'Correct!';
@@ -23,7 +23,7 @@ const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min
 
 const isEven = (number) => (number % 2 === 0);
 
-const getInvertedAnswer = (answer) => answer === 'yes' ? 'no' : 'yes';
+const getInvertedAnswer = (answer) => (answer === 'yes' ? 'no' : 'yes');
 
 const isAnswerCorrect = (answer, number) => {
   const answerBool = answer === 'yes';
