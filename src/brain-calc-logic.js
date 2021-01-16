@@ -9,8 +9,6 @@ const buildExpression = (number1, number2, operation) => `${number1} ${operation
 
 const calcExpression = (expresion) => eval(expresion);
 
-const isAnswerCorrect = (answer, result) => (answer == result);
-
 const setQuestion = () => {
     const number1 = _.random(1, 30);
     const number2 = _.random(1, 30);
@@ -23,4 +21,3 @@ const getResult = (expression) => calcExpression(expression);
 export const playBrainCalc = () => {
     startGame(rule, setQuestion, getResult);
 };
-
