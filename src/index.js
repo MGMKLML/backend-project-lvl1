@@ -6,7 +6,7 @@ export const phrases = {
   'try again': 'Let\'s try again',
   congrats: 'Congratulations',
   question: 'Question',
-  'is wrong answer': 'is wrong answer ,(.',
+  'is wrong answer': 'is wrong answer ;(.',
   'correct answer was': 'Correct answer was',
   'may I have your name': 'May I have your name? ',
   'your answer': 'Your answer: ',
