@@ -5,3 +5,4 @@
 
 ### Videos:
 [Brain-Even Game](https://asciinema.org/a/ly5SF7hEb6dznZhqIwWJENyUL)
+[Brain-Calc Game](https://asciinema.org/a/xzjSklbAjDFaHAWehkWeXRXPr)
