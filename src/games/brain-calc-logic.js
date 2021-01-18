@@ -7,16 +7,30 @@ const operations = ['+', '-', '*'];
 
 const buildExpression = (number1, number2, operation) => `${number1} ${operation} ${number2}`;
 
-const calcExpression = (expresion) => eval(expresion);
+const calcExpression = (gameData) => {
+  const { number1, number2, operation } = gameData;
+  switch (operation) {
+    case '+':
+      return number1 + number2;
+    case '-':
+      return number1 - number2;
+    case '*':
+      return number1 * number2;
+    default:
+      return 'unknown operation';
+  }
+};
 
 const setQuestion = () => {
   const number1 = _.random(1, 30);
   const number2 = _.random(1, 30);
   const operation = operations[_.random(0, 2)];
-  return buildExpression(number1, number2, operation);
+  const gameData = { number1, number2, operation };
+  const question = buildExpression(number1, number2, operation);
+  return { question, gameData };
 };
 
-const getResult = (expression) => calcExpression(expression);
+const getResult = (gameData) => calcExpression(gameData).toString();
 
 export default () => {
   startGame(rule, setQuestion, getResult);

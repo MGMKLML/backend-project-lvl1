@@ -27,35 +27,26 @@ const welcomeUser = (rule) => {
   return name;
 };
 
-const isAnswerCorrect = (answer, result) => answer === result.toString();
-
 export const startGame = (rule, setQuestion, getResult) => {
   const name = welcomeUser(rule);
 
-  let correctAnswersCount = 0;
-  let shouldContinue = true;
+  const maxCorrectAnswers = 3;
 
-  while (shouldContinue) {
-    const question = setQuestion();
+  for (let i = 0; i < maxCorrectAnswers; i += 1) {
+    const { question, gameData } = setQuestion();
     sayPhrase(`${phrases.question}: ${question}`);
 
     const answer = askQuestion(phrases['your answer']);
-    const result = getResult(question);
+    const result = getResult(gameData);
 
-    const isCorrect = isAnswerCorrect(answer, result);
-
-    if (isCorrect) {
-      correctAnswersCount += 1;
-      sayPhrase(phrases.correct);
-    } else {
+    if (answer !== result) {
       sayPhrase(`'${answer}' ${phrases['is wrong answer']} ${phrases['correct answer was']} '${result}'.`);
       sayPhrase(`${phrases['try again']}, ${name}!`);
-      shouldContinue = false;
+      return;
     }
 
-    if (correctAnswersCount === 3) {
-      shouldContinue = false;
-      sayPhrase(`${phrases.congrats}, ${name}!`);
-    }
+    sayPhrase(phrases.correct);
   }
+
+  sayPhrase(`${phrases.congrats}, ${name}!`);
 };
