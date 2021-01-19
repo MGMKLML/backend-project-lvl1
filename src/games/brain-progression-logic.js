@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { startGame } from '../index.js';
 
-const rule = 'FWhat number is missing in the progression?';
+const rule = 'What number is missing in the progression?';
 const minLength = 5;
 const maxLength = 10;
 const minStep = 2;
