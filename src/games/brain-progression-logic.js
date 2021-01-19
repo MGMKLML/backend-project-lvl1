@@ -7,16 +7,15 @@ const maxLength = 10;
 const minStep = 2;
 const maxStep = 10;
 
-
 const createProgression = (progressionLength) => {
-    let a1 = _.random(1, 30);
-    let step = _.random(minStep, maxStep);
-    let arr = [a1];
-    for (let i = 1; i < progressionLength; i += 1) {
-        arr[i] = arr[i - 1] + step;
-    };
-    return arr;
-}
+  const a1 = _.random(1, 30);
+  const step = _.random(minStep, maxStep);
+  const arr = [a1];
+  for (let i = 1; i < progressionLength; i += 1) {
+    arr[i] = arr[i - 1] + step;
+  }
+  return arr;
+};
 
 const setQuestion = () => {
   const progressionLength = _.random(minLength, maxLength);
@@ -24,7 +23,7 @@ const setQuestion = () => {
   const progression = createProgression(progressionLength);
   const questionArr = _.cloneDeep(progression);
   questionArr[missingIndex] = '..';
-  const question = questionArr.toString().replace(/\,/g, ' ');
+  const question = questionArr.toString().replace(/,/g, ' ');
   const gameData = { progression, missingIndex };
   return { question, gameData };
 };
