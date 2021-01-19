@@ -1,3 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env nodegit 
+import playBrainProgression from '../src/games/brain-progression-logic.js';
 
-console.log('progr');
+playBrainProgression();
