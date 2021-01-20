@@ -7,3 +7,9 @@
 [Brain-Even Game](https://asciinema.org/a/ly5SF7hEb6dznZhqIwWJENyUL)
 
 [Brain-Calc Game](https://asciinema.org/a/xzjSklbAjDFaHAWehkWeXRXPr)
+
+[Brain-GCD Game](https://asciinema.org/a/O4txmzB6Dp0a9Rpr7gz3OhBK5)
+
+[Brain-Progression Game](https://asciinema.org/a/moexYn4cBD9HVVlmJQLEnVvaA)
+
+[Brain-Prime Game](https://asciinema.org/a/I5VTOCc4rjHXA7dWZ06HRLLza)
