@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/MGMKLML/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/MGMKLML/backend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/495494dfb63567f03c91/maintainability)](https://codeclimate.com/github/MGMKLML/backend-project-lvl1/maintainability)
 [![Linter Check](https://github.com/MGMKLML/backend-project-lvl1/workflows/Linter%20Runner/badge.svg)](https://github.com/MGMKLML/backend-project-lvl1/actions)
 
 ### Videos:
