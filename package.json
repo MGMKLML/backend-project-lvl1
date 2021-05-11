@@ -26,7 +26,7 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
